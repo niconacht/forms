@@ -1,42 +1,30 @@
-//input
 
-const showInfo =  (targetId, infoId) => {
+//INPUT
 
-  document.addEventListener("click", (e) => {
-      
-    
 
-  })
-}
+document.addEventListener("click", (e) => {
+    const inputs = Array.from(document.getElementsByClassName("input"));
+    for (let i = 0; i < inputs.length; i++) {
+       if (e.target === inputs[i]){
+           const id = e.target.id;
+           console.log(id);
+           const outputId = `info-${id}`;
+           const outputId = "info-phone";
+           console.log(outputId);
+           document.getElementById("info-phone").classList.remove("hidden");
+       }   
+   }
+});
 
-//vereinfachen!!! module pattern???? create an object ? 
-
-if (e.target.id === "phone") {
-    const info = document.getElementById("info-phone");
-else if (e.target.id === "email") {
-    const info = document.getElementById("info-email");
-}
-else if(e.target.id === "password") {
-    const info = document.getElementById("info-password");
-}
-}
-
-//email
+//EMAIL
 
 
 
-//phone
+//PHONE
 
 
 
-
-//password
-
-
-
-
-
-
+//PASSWORD
 
 
 
