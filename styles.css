@@ -299,7 +299,7 @@ input[type=text], textarea {
     position: absolute;
     max-width: 320px;
     min-width: 220px;
-    min-height: 100%;
+    /* min-height: 100%; */
     padding: 10px 20px;
     background-color: #404040;
     border-radius: 4px;
