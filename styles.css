@@ -1,0 +1,366 @@
+/* GENERIC */
+* {
+    box-sizing: border-box;
+}
+:root {
+    --btn-color: #0077C5;
+    --border-grey: 1px solid #c7c7c7;
+    --greyish-text: #4C4C4C; 
+}
+body {
+    font-family: "Manrope", sans-serif;
+    background-color: #ECEEF1; 
+    color: var(--greyish-text);
+}
+
+a {
+    color: var(--btn-color);
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin: 0 0 20px;
+}
+
+.container {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+.list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 25px 0 0;
+}
+
+.small {
+    font-size: 11px;
+}
+
+.very-small {
+    line-height:1;
+    font-size: 9.5px; 
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* LOGIN-CORNER */
+.sign-in {
+    width: 100%;
+    display: grid;
+    justify-content: right;
+
+    grid-template-areas: "account button"   
+                         "forgot button";
+    grid-gap: 4px;
+}
+.account {
+    grid-area: account;
+}
+
+.forgot {
+    grid-area: forgot;
+}
+
+/* HEADER */
+
+.logo {
+    padding: 10px;
+}
+.title {
+    width: 150px;
+    padding: 20px 0 0;
+}
+
+.brands {
+    margin: 20px 0;
+}
+
+.brand {
+    color: #6C6D73;
+    font-size: 18px;
+}
+
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 2px;
+}
+
+.icon-quickbooks {
+    height: 20px;
+    width: 20px;
+    background: url(https://plugin.intuitcdn.net/identity-authn-core-ui/images/quickbooks-favicon@2x-c89488e8.svg) no-repeat;
+}
+
+.icon-mint {
+    height: 20px;
+    width: 20px;
+    border: transparent;
+    background: url(https://plugin.intuitcdn.net/identity-authn-core-ui/images/mint-favicon-4accf8f4.svg) no-repeat;
+}
+
+.icon-turbotax {
+    height: 20px;
+    width: 20px;
+    background: url(https://plugin.intuitcdn.net/identity-authn-core-ui/images/tt-favicon@2x-fbd64ab8.svg) no-repeat;
+}
+
+.quickbooks-brand {
+    padding: 0 5px 0 5px;
+}
+
+
+.left-first {
+    position: relative;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.7, 0, 0, 1);
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-name: left-first-anim;
+  }
+  
+  @keyframes left-first-anim {
+    0%    { left: 142px;
+            transform: scale(1)}
+    25%   { transform: scale(2)}
+    50%   { left: 142px;
+            transform: scale(1);
+             }
+    100%  { left: 0; }
+  
+  }
+  
+  .left-after {
+    animation-duration: 2.15s;
+    animation-timing-function: cubic-bezier(0.7, 0, 0, 1);
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-name: left-after-anim;
+  }
+  
+  @keyframes left-after-anim {
+    0%    { 
+            opacity: 0}
+    50%   { left: 50px;
+            opacity: 0}
+    100%   { left: 0;
+             opacity: 100%;
+             }
+  }
+
+
+/* FORM */
+
+.form-header {
+    margin-bottom: 20px;
+}
+.form-card {
+    width: 380px;
+    background-color: white;
+    padding: 30px;
+    border: var(--border-grey);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    margin: auto;
+}
+.form-subtitle {
+    font-size: 0.8em;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;  
+}
+
+label {
+    font-size: 12.5px;
+    padding: 0 0 7px  0; 
+}
+
+label {
+    display: block;
+    text-align: left;
+}
+input[type=text], textarea {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #DDDDDD;
+  }
+   
+  input[type=text]:focus, textarea:focus {
+    box-shadow: 0 0 5px rgba(119, 186, 239, 1);
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid rgba(119, 186, 239, 1);
+  }
+.input {
+    display: block;
+    width: 100%; 
+    border: var(--border-grey);
+    border-radius: 3px;
+    height: 34px;
+    padding-left: 8px;
+    padding-right: 6px;
+}
+
+
+
+::placeholder {
+    color: #D3D3D3;
+    font-size: 14px;
+}
+.field-wrapper{
+    position: relative;
+    width: 320px;  
+}
+
+#password {
+    display: inline-block;
+    padding-right: 40px;
+}
+
+.password-img {
+    width: 20px;
+    height: 100%;
+    background: url(lock_open.png)no-repeat 0% 50% / 21px 21px;
+    background-size: contain;
+    display:inline-block;
+    position: absolute;
+    top: -10px;
+    left: 290px; 
+}
+
+/* FOOTER */
+
+.legallink {
+    color: #505050;
+}
+
+.Terms {
+    font-style: italic;
+    padding-top: 30px;
+    color: #757575;
+}
+.recaptcha {
+    background-color: #ECEEF1;
+    margin: 32px -30px -30px -30px;
+    display: block;
+    color: #8d9096;
+    font-size: 10px;
+    padding: 16px;
+}
+
+.footer {
+    color: #505050;
+    line-height: 1.2rem;
+}
+
+.legal-center{
+    padding: 0 10px;
+}
+
+
+
+
+
+/* on events */
+
+.input-info {
+    text-align: left;
+    margin-left: 15px;
+    left: 100%;
+    top: 0;
+    z-index: 1;
+    position: absolute;
+    max-width: 320px;
+    min-width: 220px;
+    min-height: 100%;
+    padding: 10px 20px;
+    background-color: #404040;
+    border-radius: 4px;
+    color: white;
+    line-height: 1.1rem;
+}
+.phone-note {
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.error-msg {
+    display: block;
+    margin: 5px 0;
+    min-height: 20px;
+}
+
+/* BUTTONS */
+.btn {
+    background-color: var(--btn-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    border-color:  var(--btn-color);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.75);
+    min-width: 100px;
+    
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 14px;
+}
+.btn-img {
+    height: 1em;
+    width: .8em;
+    display: inline-block;
+    vertical-align: text-top;
+    margin-top: 2px;
+    margin-right: 4px;
+    background-size: contain;
+    position: relative;
+    background-image: url(https://plugin.intuitcdn.net/identity-authn-core-ui/images/icon-whitelock@3x-76f33cec.png);
+}
+
+.signin-btn {
+    font-size: 12px;
+    font-weight: 300;
+    width: 40px;
+    grid-area: button;
+    margin-left: 2px;
+}
+.submit-btn {
+    width: 100%;
+    height: 44px;
+}
+
+
+
+  

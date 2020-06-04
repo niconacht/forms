@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Intuit Form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sign-in">
+            <div class="small account">Already have an Intuit account?</div>
+            <div class="small forgot"><a>I forgot my User Id or Password</a></div>
+            <button class="btn signin-btn" type="submit" name="SignUp" value="submit">
+                <span class="btn-img"></span>
+                Sign In
+            </button>
+        </div>
+        <header class="header">
+            <div class="logo"><img class="title" src="title.png"></h1>
+            
+            <ul class=" list brands">
+                <li class="brand left-after"><span class="icon icon-mint left-first"></span>mint</li>
+                <li class="brand quickbooks-brand left-after" ><span class="icon icon-quickbooks left-after"></span>quickbooks</li>
+                <li class="brand left-after"><span class="icon icon-turbotax left-after"></span>turbotax</li>
+            </ul>
+        </header>
+        
+        <div class="container form-card">
+            <div class="header form-header">
+                <h2>Create an Intuit account</h2>
+                <p class="form-subtitle">One account for everyting Intuit, including Mint.<br>
+                    <a class="link small sign-in-small">Learn more</a>
+                </p>
+                <p class="form-subtitle">Already have an account?
+                    <a class="link small sign-in-small">Sign In</a>
+                </p>
+                
+            </div>
+            <div class="form-container">
+                <form action="" class="form">
+                        <fieldset>
+                            <label for ="email">Email address</label>
+                           <div class="field-wrapper"> <input class="input" id="email" type="text" name="email">
+                            <span class="hidden input-info  small" id="info-email">You'll use this as your user ID</span>
+                            <span class="error-msg error-email"></span>
+                        </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <label for ="phone">Phone (recommended)</label>
+                            <div class="field-wrapper">
+                                <input class="input" id="phone" type="text" name="phone" >
+                                <span class="hidden input-info small" id="info-phone" >We strongly recommend adding a phone number. This will helpf verify your account and keep it safe.</span>
+                                <span class="very-small phone-note">Standard call, messaging or data rates may apply.</span>
+                                <span class="error-msg error-phone"></span>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <label for ="password">Password</label>
+                            <div class="field-wrapper">
+                                <span class="password-img"></span>
+                                <input class="input" id="password" type="text" name="password">
+                                <span class="hidden input-info  small" id="info-password">Create a password you've never used before.This will help keep your account safe.</span>
+                                <span class="error-msg error-password"></span>
+                            </div>
+                        </fieldset>
+                    <button class="btn submit-btn" type="submit" name="SignUp" value="submit">
+                        <span class="btn-img"></span>
+                        Create Account
+                    </button> 
+                </form>
+            </div>
+            <div class="Terms small" >
+                <span>By clicking Create account, you agree to our<br></span>
+                <a class="link footer-link" href="">Terms</a>
+                <span>and have read and acknowledge our</span>
+                <a class="link footer-link" href="">Privacy <br>Statement</a>
+            </div>
+            <div class="recaptcha">
+                <span>Invisible reCAPTCHA by Google</span>
+                <a>Privacy Policy </a>
+                <span>and </span>
+                <a>Terms of Use.</a>
+            </div>
+        </div>
+        <footer class="footer">
+            <ul class=" list ">
+                 <li class="legal small"><a class="legallink">Legal</a></li>
+                 <li class="legal legal-center small"><a class="legallink">Privacy</a></li>
+                  <li class="legal small"><a class="legallink">Security</a></li>
+             </ul>
+             <p class="footer-text copyright small">© 2020 Intuit, Inc. All rights reserved. Intuit, QuickBooks, QB, TurboTax, ProConnect and Mint are registered trademarks of Intuit Inc.</p>
+             <p class="footer-text legal-notice small">Terms and conditions, features, support, pricing, and service options subject to change without notice.</p>
+        </footer> 
+        
+    </div>  
+    <script src="intuit.js"></script> 
+</body>
+</html>
