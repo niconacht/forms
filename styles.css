@@ -298,8 +298,8 @@ input[type=text], textarea {
     z-index: 1;
     position: absolute;
     max-width: 320px;
-    min-width: 220px;
-    min-height: 100%;
+    min-width: 200px;
+    /* min-height: 100%; */
     padding: 10px 20px;
     background-color: #404040;
     border-radius: 4px;
@@ -316,6 +316,30 @@ input[type=text], textarea {
     margin: 5px 0;
     min-height: 20px;
 }
+#fieldset-verify {
+    text-align: left;
+    margin-bottom: 20px;
+}
+#verify {
+    text-align: left !important;
+    display:inline-block;
+
+    
+}
+#verify:checked{
+    border: initial;
+    background: initial;
+    color: green;
+}
+
+#verify-text {
+    font-size: 12.5px;
+}
+#verify-italic {
+    font-style: italic;
+}
+
+
 
 /* BUTTONS */
 .btn {
