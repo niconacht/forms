@@ -1,3 +1,5 @@
+'use strict';
+
 
 
 
@@ -11,6 +13,9 @@ const showInfo = () => {
           
             if (e.target === inputs[i]){
                infoText.classList.remove("hidden");
+               phoneEntries.verifyPhone(e.target.id);
+               phoneEntries.isNumber();
+
            } 
            else {
                if
@@ -18,32 +23,55 @@ const showInfo = () => {
                    infoText.classList.add("hidden");
                };
            }  
-       }
+        }
     });
-}
+};
 
-const addEmail = () =>  {
+const addEmail = () =>  {}
  
+const phoneEntries = (function(){
+    const phoneField = document.getElementById("fieldset-phone");
+    const phoneInput = document.getElementById("phone");
+   
+    return {
+        
+         verifyPhone: function(target) {
+            const isVerified = document.getElementById("fieldset-verify");
+            const html = 
+                 `
+                <div id="fieldset-verify">
+                <input id="verify" type="checkbox" name="verify" checked>
+                <span id="verify-text" >Verify with text message </span>
+        
+                <span class="very-small" id="verify-italic">(most secure)</span>
+                </div>
+                `
+    
+            if (target ==="phone" && !isVerified){
+      
+                phoneField.innerHTML += html;
+            }
+         },
 
-const addPhone = (e) => {
-    if (e.target.id ==="phone"){
-        
-        
-    }
+         isNumber: function(){
+             phoneInput.addEventListener("keydown", function (e){
+                 
+                var charCode = (e.which) ? e.which : e.keyCode
+                if (charCode > 31 && (charCode < 48 || charCode > 57))
+                    return false;
+                return true;
+            })
+         }
+          
+    }  
+})();
 
 const addPassword = (e) =>  {
 
 }
 
-
-
-
-
-
-
-
-
 showInfo();
+
 // placeholder ="You'll verify this later"
 // placeholder="Helps with lost passwords and security"
 // placeholder = "Don't reuse an old password" 
