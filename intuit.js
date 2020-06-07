@@ -40,9 +40,7 @@ const addPhone = (target) => {
     if (target ==="phone" && !isVerified){
       const phoneField = document.getElementById("fieldset-phone");
       phoneField.innerHTML += html;
-
-        
-        
+   
     }
 }
 
